@@ -1,0 +1,24 @@
+{% extends "users/base.html" %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<div style='padding-left:45%;'>
+	<h3> Home </h3>
+</div>
+
+{% if request.session.message %}
+	{{ request.session.message }}
+{% endif %}
+
+{% if oauth_authorized %}
+	<p>You have done linking of your Google account.</p>
+{% else %}
+	<a href="{{ oauth_url }}">
+		Please click on this link to give access to your Google account.
+	</a>
+{% endif %}
+
+{% endblock %}

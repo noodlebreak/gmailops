@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	{% block extrahead %}{% endblock %}
+</head>
+<body>
+	<div>	
+		{% if request.user.is_authenticated %}
+			<p style="float:left">
+				Hi, {{ request.user.get_full_name|default:request.user.username }}	
+			</p>
+
+			<p style="float:left; margin-left:10px;">
+				<a href="{% url 'logout' %}">Logout</a>
+			</p>
+		{% else %}
+			You are not logged in
+			<br>
+			<a href="{% url 'login' %}">Login</a>
+			<a href="{% url 'signup' %}">Signup</a>
+		{% endif %}
+		<br>
+	</div>
+
+{% block header %} {% endblock %}
+{% block content %} {% endblock %}
+{% block footer %} {% endblock %}
+</body>
+</html>
