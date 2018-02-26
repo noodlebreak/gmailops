@@ -1,5 +1,4 @@
 import base64
-import re
 
 import google.auth.exceptions as google_auth_exceptions
 import google.oauth2.credentials
@@ -7,10 +6,7 @@ import googleapiclient.discovery
 import pytz
 from apiclient import errors
 from dateutil.parser import parse as parse_date
-from django.conf import settings
-from django.db.models import Q
 from django.db.utils import OperationalError
-from django.utils import timezone
 from googleapiclient.http import BatchHttpRequest
 
 from users.models import User
