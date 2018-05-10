@@ -1,4 +1,10 @@
-# Tenmiles Assignment
+# GMail Ops
+
+This was an assignment for one of the companies I had applied to this year,
+but unfortunately couldn't join them. Anyways, whoever finds it or parts of
+it useful, have a great exploring :)
+
+
 Simple project to fetch mails from GMail after authenticating a user
 and storing their OAuth token.
 
