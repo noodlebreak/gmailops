@@ -5,7 +5,7 @@ beautifulsoup4==4.6.0
 billiard==3.3.0.23
 cachetools==2.0.1
 celery==3.1.19
-certifi==2018.1.18
+certifi==2022.12.7
 chardet==3.0.4
 decorator==4.2.1
 Django==1.11.23
